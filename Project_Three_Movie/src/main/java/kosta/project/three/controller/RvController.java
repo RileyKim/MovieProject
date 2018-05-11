@@ -15,17 +15,17 @@ import kosta.project.three.model.LocDTO;
 import kosta.project.three.model.RvDAO;
 
 
-
+//í…ŒìŠ¤íŠ¸
 @Controller
 public class RvController {
 	
 	@Resource
 	private RvDAO rvdao;
 	
-	//¿µÈ­¼±ÅÃÈÄ Áö¿ª¼±ÅÃÆäÀÌÁö·Î °¥¶§
+	//ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@RequestMapping(value ="/loc_select.do")
 	public String loc(@RequestParam("movie_code")String movie_code, Model model) {
-		model.addAttribute("movie_code", movie_code); //Å¬¸¯ÇÑ ¿µÈ­ÄÚµå ¹ÞÀ½
+		model.addAttribute("movie_code", movie_code); //Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½
 		
 		List<LocDTO> list = rvdao.getLocList();
 		model.addAttribute("list", list);
@@ -33,7 +33,7 @@ public class RvController {
 		
 	}
 	
-	//Áö¿ª¼±ÅÃÈÄ ³¯Â¥¼±ÅÃÆäÀÌÁö·Î °¥¶§
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@RequestMapping(value="/date_select.do")	
 	public String time(@RequestParam("movie_code")String movie_code,
 			@RequestParam("loc_code")String loc_code, Model model) {
@@ -45,7 +45,7 @@ public class RvController {
 		return "date_select";
 	}
 	
-	//¿¹¸ÅÃ¹¹øÂ°ÆäÀÌÁö
+	//ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½Â°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@RequestMapping("/reservation.do")
 	public String movie_select() {
 		return "reservation";
