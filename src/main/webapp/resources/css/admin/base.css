@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.adminUser{
+	
+	margin-top : 80px;
+	margin-right : auto;
+	margin-left : auto;
+	border-spacing: 0px;
+	padding : 0px;
+	border-collapse: collapse;
+	width : 720px;
+	border-top : 2px solid #8CBA34;
+	background: #f5f5f5;
+}
+
