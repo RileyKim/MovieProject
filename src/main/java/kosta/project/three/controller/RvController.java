@@ -22,7 +22,7 @@ public class RvController {
 	@Resource
 	private RvDAO rvdao;
 	
-	//영화선택후 지역선택페이지로 갈때
+	//영화선택후 지역선택페이지로 갈때dd
 	@RequestMapping(value ="/loc_select.do")
 	public String loc(@RequestParam("movie_code")String movie_code, Model model) {
 		model.addAttribute("movie_code", movie_code); //클릭한 영화코드 받음
