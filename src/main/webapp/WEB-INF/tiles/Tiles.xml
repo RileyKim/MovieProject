@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions
+	 PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+		
+	
+<tiles-definitions>
+	<definition name="reservation" template="/WEB-INF/views/reservation/movie_select.jsp">
+		<put-attribute name="title" value="영화선택"></put-attribute>
+	</definition>
+	
+	<definition name="loc_select" template="/WEB-INF/views/reservation/loc_select.jsp">
+		<put-attribute name="title" value="영화관선택"></put-attribute>
+	</definition>
+	
+	<definition name="date_select" template="/WEB-INF/views/reservation/date_select.jsp">
+		
+	</definition>
+	
+	
+	<definition name="adminUserList" template="/WEB-INF/views/adminUserList/layout.jsp">
+		<put-attribute name="title" value="Spring Tiles Example" /> 
+		<put-attribute name="header" value="/WEB-INF/views/adminUserList/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/adminUserList/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/adminUserList/body.jsp" />
+	</definition>
+	
+	<definition name="adminQuestion" extends="adminUserList">
+		<put-attribute name="body" value="/WEB-INF/views/adminQuestion/question-body.jsp" />	
+	</definition>
+
+	<definition name="adminMovie" extends="adminUserList">
+		<put-attribute name="body" value="/WEB-INF/views/adminMovie/movie-body.jsp" />
+	</definition>
+
+	<definition name="adminEvent" extends="adminUserList">
+		<put-attribute name="body" value="/WEB-INF/views/adminEvent/Event-body.jsp" />
+	</definition>
+	
+	<!-- return home.index -->
+	 <!-- <definition name="home.*" template="/WEB-INF/views/inc/layout.jsp">
+	 	<put-attribute name="header"  value="/WEB-INF/views/inc/header.jsp"></put-attribute>
+	 	<put-attribute name="footer"  value="/WEB-INF/views/inc/footer.jsp"></put-attribute>
+	 	<put-attribute name="content" value="/WEB-INF/views/{1}.jsp"></put-attribute>
+	 </definition> -->
+	 
+	
+	
+	<!-- <definition name="*.*" template="/WEB-INF/views/{1}/inc/layout.jsp">
+		<put-attribute name="title"   value="kosta notice list" />
+		<put-attribute name="header"  value="/WEB-INF/views/inc/header.jsp" />
+		<put-attribute name="css"     value="{2}.css"/>
+		<put-attribute name="footer"  value="/WEB-INF/views/inc/footer.jsp" />
+		<put-attribute name="aside"   value="/WEB-INF/views/{1}/inc/aside.jsp" />
+		<put-attribute name="visual"  value="/WEB-INF/views/{1}/inc/visual.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition> -->
+
+
+</tiles-definitions>
